@@ -1,9 +1,9 @@
 <h1 align="center">
-  Jim's Books 📚
+  My Books 📚
 </h1>
 
 <p align="center">
-  <strong>A personal, minimalist 3D book showcase.</strong>
+  <strong>A personal, minimalist 3D book showcase for my books.</strong>
 </p>
 
 <p align="center">
