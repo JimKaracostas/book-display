@@ -130,6 +130,9 @@ body {
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: rotateY(-20deg) rotateX(5deg);
   cursor: pointer;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .book-3d-container:hover .book-3d {
@@ -147,6 +150,8 @@ body {
   background-size: 600px 100% !important;
   /* subtle gradient for lighting instead of inset shadow */
   background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .book-front {
@@ -263,3 +268,48 @@ body {
     font-size: 2.5rem;
   }
 }
+
+@media (max-width: 500px) {
+  .book-3d-container {
+    width: 220px;
+    height: 330px;
+  }
+
+  .book-front, .book-back {
+    transform: translateZ(15px);
+  }
+
+  .book-back {
+    transform: rotateY(180deg) translateZ(15px);
+  }
+
+  .book-spine {
+    width: 30px;
+    margin-left: -15px;
+    transform: rotateY(-90deg) translateZ(110px);
+  }
+
+  .book-pages {
+    width: 26px;
+    margin-left: -13px;
+    transform: rotateY(90deg) translateZ(109px);
+  }
+
+  .book-top, .book-bottom {
+    height: 26px;
+    margin-top: -13px;
+  }
+
+  .book-top {
+    transform: rotateX(90deg) translateZ(164px);
+  }
+
+  .book-bottom {
+    transform: rotateX(-90deg) translateZ(164px);
+  }
+
+  .showcase-title {
+    font-size: 2rem;
+  }
+}
+
